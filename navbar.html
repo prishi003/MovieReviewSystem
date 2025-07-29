@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title></title>
+    
+    <style>
+        :root {
+            --ghibli-green: #64b49a;
+            --ghibli-dark: #2f1b15;
+            --ghibli-gold: #ffcc66;
+            --ghibli-cream: #f8f6f0;
+        }
+
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--ghibli-green) 0%, #7ac3a8 100%);
+            padding: 8px 0;
+            box-shadow: 0 2px 15px rgba(100, 180, 154, 0.25);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            min-height: auto;
+        }
+
+        .navbar-brand {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--ghibli-dark) !important;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.03);
+            color: white !important;
+        }
+
+        .navbar-nav {
+            margin: 0;
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Inter', sans-serif;
+            color: white !important;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 8px 18px !important;
+            margin: 0 4px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+            transition: left 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::before {
+            left: 0;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .navbar-nav .nav-link i {
+            margin-right: 6px;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover i {
+            transform: scale(1.1);
+        }
+
+        .ghibli-logo {
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .ghibli-logo:hover {
+            transform: rotate(3deg) scale(1.05);
+        }
+
+        .navbar-toggler {
+            border: 1.5px solid white;
+            border-radius: 6px;
+            padding: 4px 6px;
+            font-size: 0.9rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            width: 20px;
+            height: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .navbar-collapse {
+            flex-grow: 0;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                font-size: 1.6rem;
+            }
+            
+            .ghibli-logo {
+                height: 50px !important;
+            }
+            
+            .navbar-collapse {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                margin-top: 10px;
+                padding: 15px;
+                backdrop-filter: blur(10px);
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 15px !important;
+                margin: 2px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.4rem;
+            }
+            
+            .ghibli-logo {
+                height: 45px !important;
+                position: static !important;
+                margin-top: 8px;
+            }
+
+            .navbar-custom {
+                padding: 6px 0;
+            }
+        }
+
+        /* Floating animation for logo - more subtle */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-2px); }
+        }
+
+        .ghibli-logo {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Logo container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Body padding to compensate for fixed navbar */
+        body {
+            padding-top: 80px; /* Adjust based on navbar height */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.php">
+                Ghibliesque
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">
+                            <i class="fas fa-home"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="showall.php">
+                            <i class="fas fa-film"></i>Show All
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="searching.php">
+                            <i class="fas fa-search"></i>Search
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="toprated.php">
+                            <i class="fas fa-star"></i>Top Rated
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">
+                            <i class="fas fa-sign-in-alt"></i>Sign In
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reg.php">
+                            <i class="fas fa-user-plus"></i>Register
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Logo -->
+                <div class="logo-container d-none d-lg-block">
+                    <img src="images/logotrans.png" alt="Ghibli Logo" class="ghibli-logo" height="60">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

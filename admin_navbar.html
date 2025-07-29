@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+        
+  <title>Admin Panel</title>
+</head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+ html, body {
+		background-color: #64b49a; /* Green color - match your header */
+		margin: 0;
+		padding: 0;
+		min-height: 100%;
+	}
+        .navbar {
+            background-color: #64b49a; /* Green color - match your header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0;
+        }
+
+  /* Navbar Heading */
+  .navbar h1 {
+      font-size: 36px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: rgb(47, 27, 21);
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  /* Navbar Links */
+  .nav.navbar-nav {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 10px 0;
+  }
+
+  .nav.navbar-nav li {
+      display: inline-block;
+  }
+
+  .nav.navbar-nav li a {
+      font-family: "Times New Roman", Times, serif;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block; /* Important for scaling effect */
+      background: transparent !important;
+      transition: all 0.3s ease-in-out;
+  }
+
+  /* Hover Effect */
+  .nav.navbar-nav li a:hover {
+      transform: scale(1.1); /* Slight zoom effect */
+  }
+</style>
+<body>
+    <nav class="navbar navigation" style="background-color:#468c768b; display: flex; align-items: center; justify-content: center; position: relative; padding: 10px;">
+		<div class="navbar-header" style="text-align: center;">
+   	   	<h1 style="font-size:36px; font-family:'Times New Roman', Times, serif; font-weight:bold; color:rgb(47, 27, 21); text-align: center;">Ghibliesque</h1>
+	   
+        <ul class="nav navbar-nav" style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 10px 0;">
+
+   	   	 <li><a href="adminIndex.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">Home</a></li>
+   	   	 <li><a href="showall_admin.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">Show All</a></li>
+        <li><a href="searchingadmin.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">Search</a></li>
+         <li><a href="admin_toprated.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">Top</a></li>		   	
+        <li><a href="addmovies.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">Add Movies</a></li>
+        <li><a href="userList.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">UserList</a></li>
+        <li><a href="logOut.php" style="font-family:'Times New Roman', Times, serif; color:white; font-size:24px; font-weight:bold;">Log out</a></li>
+       </ul> <!-- End of navbar-nav -->
+   	   </div> <!-- End of navbar-header -->
+        <img src="images/logotrans.png" alt="" class="logo" height="100px" width="auto" style="position: absolute; right: 20px;">
+
+   </nav> <!-- End of nav -->
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+</body>
+</html>

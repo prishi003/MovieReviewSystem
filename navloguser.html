@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        html, body {
+		background-color: #64b49a; /* Green color - match your header */
+		margin: 0;
+		padding: 0;
+		min-height: 100%;
+	}
+        .navbar {
+            background-color: #64b49a; /* Green color - match your header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0;
+        }
+
+        /* Navbar Heading */
+        .navbar h1 {
+            font-size: 36px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: rgb(47, 27, 21);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Navbar Links */
+        .nav.navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .nav.navbar-nav li {
+            display: inline-block;
+        }
+
+        .nav.navbar-nav li a {
+            font-family: "Times New Roman", Times, serif;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block; /* Important for scaling effect */
+            background: transparent !important;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .nav.navbar-nav li a:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navigation" style=" display: flex; align-items: center; justify-content: center; position: relative; padding: 10px;">
+    <div style="text-align: center;">
+        <h1>Ghibliesque</h1>
+        <ul class="nav navbar-nav">
+            <li><a href="showall_user.php">Show All</a></li>
+            <li><a href="searchinguser.php">Search</a></li>
+            <li><a href="recommended.php">Recommended</a></li>
+            <li><a href="toprated_user.php">Top Rated</a></li>
+            <li><a href="logOut.php">Log out</a></li>
+        </ul>
+    </div>
+    <img src="images/logotrans.png" alt="" class="logo" height="100px" width="auto" style="position: absolute; right: 20px;">
+
+    </nav> 
+</body>
+</html>
