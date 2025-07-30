@@ -65,7 +65,7 @@ The website features a beautiful, responsive design with a clean user interface 
 Contributions are welcome! Feel free to fork this repository, create a new branch, and submit a pull request.
 
 ## License
-This project is created for educational purposes as part of an Advanced Database Laboratory project.
+This project is created for educational purposes as part of an Application Development Laboratory project.
 
 ---
 *Made with ❤️ for Studio Ghibli fans worldwide*
