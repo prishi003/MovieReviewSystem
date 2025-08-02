@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-include 'navbar.html';
+include 'navloguser.html';
 include "connection.php";
 ?>
 
@@ -19,6 +19,8 @@ include "connection.php";
     min-height: 100vh; /* Ensures it covers the full viewport height */
     margin: 0;
     padding: 0;
+    padding-top: 100px; /* adjust according to navbar height */
+
   }
 .search-container {
   font-family: 'Times new roman', sans-serif;
@@ -72,7 +74,7 @@ include "connection.php";
                 echo "<td>" . htmlspecialchars($row["year"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["language"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["genre"]) . "</td>";
-                echo "<td><a href='details.php?mid=" . urlencode($row["mid"]) . "' class='btn btn-info'>View Details</a></td>";
+                echo "<td><a href='details_user.php?mid=" . urlencode($row["mid"]) . "' class='btn btn-info'>View Details</a></td>";
                 echo "</tr>";
             }
             echo "</table>";

@@ -12,6 +12,8 @@ include 'navloguser.html';
             background-image: url('images/main2.jpg');
             background-size: cover;
             background-position: center;
+            padding-top: 30px; /* adjust according to navbar height */
+
         }
         .movie-container {
             background: rgba(29, 45, 38, 0.7); /* Translucent background */

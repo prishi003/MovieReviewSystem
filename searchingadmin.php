@@ -19,6 +19,8 @@ include "connection.php";
     min-height: 100vh; /* Ensures it covers the full viewport height */
     margin: 0;
     padding: 0;
+    padding-top: 100px; /* adjust according to navbar height */
+
   }
 .search-container {
   font-family: 'Times new roman', sans-serif;

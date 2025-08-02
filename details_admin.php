@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             min-height: 100%;
+            padding-top: 70px; /* adjust according to navbar height */
 
 			background-image: url('images/main2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
         }

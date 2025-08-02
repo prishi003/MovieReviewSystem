@@ -4,7 +4,7 @@ The website features a beautiful, responsive design with a clean user interface 
 ## Screenshots
 
 ### Homepage
-![Ghibliesque Homepage](ss.png)
+![Ghibliesque Homepage](Screenshot%202025-07-30%20005525.png)
 
 
 ## Features

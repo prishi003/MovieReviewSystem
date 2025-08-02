@@ -28,10 +28,14 @@ include "connection.php";
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            padding-top: 0 !important; /* Override navbar padding */
+
         }
 
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/main2.jpg');
+            margin-top: -80px; /* Compensate for navbar height */
+            padding-top: 80px; 
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2)), url('images/main2.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
