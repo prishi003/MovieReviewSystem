@@ -1,10 +1,11 @@
 # Ghibliesque
 The website features a beautiful, responsive design with a clean user interface that celebrates the enchanting world of Studio Ghibli.
 
+DISCLAIMER- Only for educational and recreational purpose. ALL RIGHTS BELONG TO STUDIO GHIBLI.
 ## Screenshots
 
 ### Homepage
-![Ghibliesque Homepage](Screenshot%202025-07-30%20005525.png)
+![Ghibliesque Homepage](ss11.png)
 
 
 ## Features
